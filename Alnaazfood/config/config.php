@@ -1,22 +1,27 @@
 <?php
-// ============================================
-// AL-NAAZ FOOD - Main Configuration
-// ============================================
-
-// Start session if not started
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+function getConnection() {
+    try {
+        // TiDB Cloud specific settings
+        $host = $_ENV['DB_HOST'] ?? 'gateway01.us-east-1.prod.aws.tidbcloud.com';
+        $port = $_ENV['DB_PORT'] ?? '4000';
+        $dbname = $_ENV['DB_NAME'] ?? 'alnaaz_food';
+        $user = $_ENV['DB_USER'] ?? '4ECgEy46VpiH8pQ.root';
+        $pass = $_ENV['DB_PASS'] ?? 'U3auYF1A7uTfBv38';
+        
+        // TLS connection string
+        $conn = new mysqli($host, $user, $pass, $dbname, $port);
+        
+        if ($conn->connect_error) {
+            throw new Exception("Connection failed: " . $conn->connect_error);
+        }
+        
+        $conn->set_charset("utf8mb4");
+        return $conn;
+    } catch (Exception $e) {
+        error_log("DB Error: " . $e->getMessage());
+        return null;
+    }
 }
-
-// Include database
-require_once __DIR__ . '/database.php';
-
-// Site Configuration
-define('SITE_NAME', 'AL-NAAZ FOOD');
-define('SITE_TAGLINE', 'Premium Spices & Food Essentials');
-define('SITE_URL', 'http://localhost/al-naaz-food/');
-define('ADMIN_EMAIL', 'owner@alnaazfood.com');
-
 // Timezone
 date_default_timezone_set('Asia/Kolkata');
 
