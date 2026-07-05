@@ -3,7 +3,8 @@
 // AL-NAAZ FOOD - Home Page
 // ============================================
 
-require_once __DIR__ . '/../config/config.php';
+$base_path = __DIR__ . '/../';
+require_once $base_path . 'config/config.php';
 
 $page_css = 'home.css';
 $page_js = 'home.js';
