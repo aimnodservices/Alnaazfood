@@ -1,26 +1,40 @@
 <?php
-function getConnection() {
-    try {
-        // TiDB Cloud specific settings
-        $host = $_ENV['DB_HOST'] ?? 'gateway01.us-east-1.prod.aws.tidbcloud.com';
-        $port = $_ENV['DB_PORT'] ?? '4000';
-        $dbname = $_ENV['DB_NAME'] ?? 'alnaaz_food';
-        $user = $_ENV['DB_USER'] ?? '4ECgEy46VpiH8pQ.root';
-        $pass = $_ENV['DB_PASS'] ?? 'U3auYF1A7uTfBv38';
-        
-        // TLS connection string
-        $conn = new mysqli($host, $user, $pass, $dbname, $port);
-        
-        if ($conn->connect_error) {
-            throw new Exception("Connection failed: " . $conn->connect_error);
-        }
-        
-        $conn->set_charset("utf8mb4");
-        return $conn;
-    } catch (Exception $e) {
-        error_log("DB Error: " . $e->getMessage());
-        return null;
-    }
+// ============================================
+// AL-NAAZ FOOD - Main Configuration
+// ============================================
+
+// Start session
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Vercel environment check
+$is_vercel = isset($_ENV['VERCEL']) || isset($_SERVER['VERCEL']);
+
+// Site URL - Auto detect for Vercel
+if ($is_vercel) {
+    $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+    $host = $_SERVER['HTTP_HOST'] ?? 'al-naaz-food.vercel.app';
+    define('SITE_URL', $protocol . $host . '/');
+} else {
+    define('SITE_URL', 'http://localhost/al-naaz-food/');
+}
+
+// Database configuration for Vercel
+if ($is_vercel) {
+    // TiDB Cloud
+    define('DB_HOST', $_ENV['DB_HOST'] ?? 'gateway01.us-east-1.prod.aws.tidbcloud.com');
+    define('DB_NAME', $_ENV['DB_NAME'] ?? 'al_naaz_food');
+    define('DB_USER', $_ENV['DB_USER'] ?? '4ECgEy46VpiH8pQ.root');
+    define('DB_PASS', $_ENV['DB_PASS'] ?? 'U3auYF1A7uTfBv38');
+    define('DB_PORT', $_ENV['DB_PORT'] ?? '4000');
+} else {
+    // Local development
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'al_naaz_food');
+    define('DB_USER', 'root');
+    define('DB_PASS', 'U3auYF1A7uTfBv38');
+    define('DB_PORT', '3306');
 }
 // Timezone
 date_default_timezone_set('Asia/Kolkata');
