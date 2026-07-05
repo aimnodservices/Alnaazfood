@@ -1,0 +1,5 @@
+config/
+.htaccess
+.gitignore
+README.md
+*.sql
