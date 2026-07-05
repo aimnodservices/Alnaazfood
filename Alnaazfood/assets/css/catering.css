@@ -1,0 +1,125 @@
+/* ============================================
+   AL-NAAZ FOOD - Catering Page Styles
+   ============================================ */
+
+.catering-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.catering-card {
+    background: var(--dark-black);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+.catering-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--royal-gold);
+}
+
+.catering-card .icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.catering-card h3 {
+    font-size: 20px;
+    color: var(--royal-gold);
+    margin-bottom: 10px;
+}
+
+.catering-card p {
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+.booking-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--dark-black);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.booking-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-form label {
+    display: block;
+    color: var(--text-grey);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--primary-black);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--text-white);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: var(--royal-gold);
+}
+
+.booking-form textarea {
+    resize: vertical;
+}
+
+.catering-contact {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.catering-contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--royal-gold);
+    margin-bottom: 10px;
+}
+
+.catering-contact p {
+    color: var(--text-grey);
+    margin-bottom: 25px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .booking-form .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-form-container {
+        padding: 20px;
+    }
+}

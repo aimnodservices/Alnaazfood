@@ -1,0 +1,340 @@
+/* ============================================
+   AL-NAAZ FOOD - Products Page Styles
+   ============================================ */
+
+/* Page Banner */
+.page-banner {
+    padding: 120px 0 60px;
+    background: linear-gradient(135deg, var(--primary-black), var(--dark-black));
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.page-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: var(--royal-gold);
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    color: var(--text-grey);
+    font-size: 18px;
+}
+
+/* Filter Form */
+.filter-form {
+    background: var(--dark-black);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.filter-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.filter-group label {
+    display: block;
+    color: var(--text-grey);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input {
+    width: 100%;
+    padding: 10px 15px;
+    background: var(--primary-black);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--text-white);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    outline: none;
+    border-color: var(--royal-gold);
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--dark-black);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--royal-gold);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: var(--royal-gold);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+/* Enquiry Box */
+.enquiry-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--dark-black);
+    padding: 50px;
+    border-radius: 15px;
+    border: 2px solid var(--royal-gold);
+    text-align: center;
+}
+
+.enquiry-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--royal-gold);
+    margin-bottom: 15px;
+}
+
+.enquiry-content p {
+    color: var(--text-grey);
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.enquiry-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Reservation Box */
+.reservation-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--dark-black);
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.reservation-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--royal-gold);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.reservation-box > p {
+    text-align: center;
+    color: var(--text-grey);
+    margin-bottom: 30px;
+}
+
+.reservation-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.reservation-form .form-group {
+    margin-bottom: 15px;
+}
+
+.reservation-form input,
+.reservation-form textarea,
+.reservation-form select {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--primary-black);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--text-white);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.reservation-form input:focus,
+.reservation-form textarea:focus {
+    outline: none;
+    border-color: var(--royal-gold);
+}
+
+.reservation-form textarea {
+    resize: vertical;
+}
+
+/* Offers Grid */
+.offers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.offer-card {
+    background: var(--dark-black);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--royal-gold);
+}
+
+.offer-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offer-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.discount-badge {
+    background: var(--deep-red);
+    color: var(--text-white);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.offer-info {
+    padding: 25px;
+}
+
+.offer-info h3 {
+    font-size: 22px;
+    color: var(--royal-gold);
+    margin-bottom: 10px;
+}
+
+.offer-info p {
+    color: var(--text-grey);
+    margin-bottom: 15px;
+}
+
+.offer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--text-grey);
+}
+
+.days-left {
+    color: var(--royal-gold);
+    font-weight: 600;
+}
+
+/* Subscribe Box */
+.subscribe-box {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subscribe-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--royal-gold);
+    margin-bottom: 10px;
+}
+
+.subscribe-box p {
+    color: var(--text-grey);
+    margin-bottom: 25px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 14px 20px;
+    background: var(--primary-black);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--text-white);
+    font-size: 16px;
+}
+
+.subscribe-form input:focus {
+    outline: none;
+    border-color: var(--royal-gold);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner h1 {
+        font-size: 32px;
+    }
+    
+    .filter-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .reservation-form .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .subscribe-form {
+        flex-direction: column;
+    }
+    
+    .enquiry-box {
+        padding: 30px 20px;
+    }
+    
+    .reservation-box {
+        padding: 30px 20px;
+    }
+}

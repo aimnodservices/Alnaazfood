@@ -1,0 +1,71 @@
+/* ============================================
+   AL-NAAZ FOOD - Home Page Styles
+   ============================================ */
+
+/* Hero Section Extras */
+.hero .badge {
+    display: inline-block;
+    background: var(--deep-red);
+    color: var(--text-white);
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Product Grid Animation */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
+}
+
+/* Counter Animation */
+.counter {
+    transition: all 0.5s ease;
+}
+
+/* Wholesale Section */
+.wholesale-box {
+    background: linear-gradient(135deg, var(--dark-black), #1A0A0A);
+    border: 2px solid var(--royal-gold);
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wholesale-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--royal-gold);
+    margin-bottom: 15px;
+}
+
+.wholesale-box p {
+    color: var(--text-grey);
+    margin-bottom: 25px;
+}
+
+.wholesale-box .btn-whatsapp {
+    background: #25D366;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.wholesale-box .btn-whatsapp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}

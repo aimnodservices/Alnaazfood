@@ -1,0 +1,188 @@
+/* ============================================
+   AL-NAAZ FOOD - Owner Page Styles
+   ============================================ */
+
+.owner-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    background: var(--dark-black);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.owner-image {
+    text-align: center;
+}
+
+.owner-image img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--royal-gold);
+}
+
+.owner-avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: var(--primary-black);
+    border: 4px solid var(--royal-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.owner-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--royal-gold);
+    margin-bottom: 5px;
+}
+
+.owner-details .designation {
+    color: var(--text-grey);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.owner-details .owner-bio {
+    color: var(--text-grey);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.owner-contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    color: var(--text-grey);
+}
+
+.contact-item i {
+    color: var(--royal-gold);
+    width: 20px;
+}
+
+.contact-item a {
+    color: var(--text-grey);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--royal-gold);
+}
+
+.owner-social {
+    display: flex;
+    gap: 15px;
+}
+
+.owner-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-black);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: var(--text-grey);
+    transition: all 0.3s ease;
+}
+
+.owner-social a:hover {
+    background: var(--royal-gold);
+    color: var(--primary-black);
+    border-color: var(--royal-gold);
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.contact-card {
+    background: var(--dark-black);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--royal-gold);
+}
+
+.contact-card .icon {
+    font-size: 36px;
+    color: var(--royal-gold);
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 18px;
+    color: var(--royal-gold);
+    margin-bottom: 10px;
+}
+
+.contact-card p,
+.contact-card a {
+    color: var(--text-grey);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: var(--royal-gold);
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .owner-profile {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .owner-image img,
+    .owner-avatar {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .owner-details h2 {
+        font-size: 28px;
+    }
+    
+    .owner-social {
+        justify-content: center;
+    }
+    
+    .owner-contact-info {
+        text-align: left;
+    }
+}
